@@ -6,9 +6,10 @@ function List(props) {
       {props.userList.map((user, index) => {
         return (
           <div key={index}>
-            <p>{user.name}</p>
-            <p>{user.email}</p>
-            <p>{user.role}</p>
+            <p>{"Name: " + user.name}</p>
+            <p>{"Email: " + user.email}</p>
+            <p>{"Occupation: " + user.role}</p>
+            <button onClick={() => {props.editMember(user); props.setKey(index)}}>Edit</button>
           </div>
         );
       })}
